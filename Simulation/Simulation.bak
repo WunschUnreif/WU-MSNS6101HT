@@ -1,0 +1,224 @@
+EESchema Schematic File Version 4
+LIBS:Simulation-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Amplifier_Operational:LM358 U1
+U 1 1 5D5D5F7B
+P 3450 3600
+F 0 "U1" H 3450 3967 50  0000 C CNN
+F 1 "LM358" H 3450 3876 50  0000 C CNN
+F 2 "" H 3450 3600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 3450 3600 50  0001 C CNN
+F 4 "X" H 3450 3600 50  0001 C CNN "Spice_Primitive"
+F 5 "LMX58_LM2904" H 3450 3600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3450 3600 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 2 8 4 1" H 3450 3600 50  0001 C CNN "Spice_Node_Sequence"
+F 8 "LMx58_LM2904.CIR" H 3450 3600 50  0001 C CNN "Spice_Lib_File"
+	1    3450 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR01
+U 1 1 5D5D6619
+P 2550 3050
+F 0 "#PWR01" H 2550 2900 50  0001 C CNN
+F 1 "VDD" H 2567 3223 50  0000 C CNN
+F 2 "" H 2550 3050 50  0001 C CNN
+F 3 "" H 2550 3050 50  0001 C CNN
+	1    2550 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5D5D7021
+P 2550 3300
+F 0 "R1" H 2481 3254 50  0000 R CNN
+F 1 "100k" H 2481 3345 50  0000 R CNN
+F 2 "" V 2480 3300 50  0001 C CNN
+F 3 "~" H 2550 3300 50  0001 C CNN
+	1    2550 3300
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5D5D73A5
+P 2550 3950
+F 0 "R2" H 2481 3904 50  0000 R CNN
+F 1 "100k" H 2481 3995 50  0000 R CNN
+F 2 "" V 2480 3950 50  0001 C CNN
+F 3 "~" H 2550 3950 50  0001 C CNN
+	1    2550 3950
+	1    0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5D5D7F1C
+P 2550 4200
+F 0 "#PWR02" H 2550 3950 50  0001 C CNN
+F 1 "GND" H 2555 4027 50  0000 C CNN
+F 2 "" H 2550 4200 50  0001 C CNN
+F 3 "" H 2550 4200 50  0001 C CNN
+	1    2550 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 3050 2550 3150
+Wire Wire Line
+	2550 4100 2550 4200
+$Comp
+L Device:R R3
+U 1 1 5D5DAF2F
+P 2850 3500
+F 0 "R3" V 2643 3500 50  0000 C CNN
+F 1 "10k" V 2734 3500 50  0000 C CNN
+F 2 "" V 2780 3500 50  0001 C CNN
+F 3 "~" H 2850 3500 50  0001 C CNN
+	1    2850 3500
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5D5DBC2D
+P 3300 3100
+F 0 "R4" V 3093 3100 50  0000 C CNN
+F 1 "10k" V 3184 3100 50  0000 C CNN
+F 2 "" V 3230 3100 50  0001 C CNN
+F 3 "~" H 3300 3100 50  0001 C CNN
+	1    3300 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2550 3450 2550 3500
+Wire Wire Line
+	2700 3500 2550 3500
+Connection ~ 2550 3500
+Wire Wire Line
+	2550 3500 2550 3800
+Wire Wire Line
+	3150 3500 3100 3500
+Wire Wire Line
+	3100 3500 3100 3100
+Wire Wire Line
+	3100 3100 3150 3100
+Connection ~ 3100 3500
+Wire Wire Line
+	3100 3500 3000 3500
+Wire Wire Line
+	3450 3100 3800 3100
+Wire Wire Line
+	3800 3100 3800 3600
+Wire Wire Line
+	3800 3600 3750 3600
+$Comp
+L pspice:VSOURCE V1
+U 1 1 5D5DDE3A
+P 3000 4050
+F 0 "V1" H 3228 4096 50  0000 L CNN
+F 1 "VSOURCE" H 3228 4005 50  0000 L CNN
+F 2 "" H 3000 4050 50  0001 C CNN
+F 3 "~" H 3000 4050 50  0001 C CNN
+F 4 "V" H 3000 4050 50  0001 C CNN "Spice_Primitive"
+F 5 "sin(1.65 0.5 100 0 0)" H 3000 4050 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3000 4050 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3000 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 3750 3000 3700
+Wire Wire Line
+	3000 3700 3150 3700
+$Comp
+L power:GND #PWR03
+U 1 1 5D5DE906
+P 3000 4450
+F 0 "#PWR03" H 3000 4200 50  0001 C CNN
+F 1 "GND" H 3005 4277 50  0000 C CNN
+F 2 "" H 3000 4450 50  0001 C CNN
+F 3 "" H 3000 4450 50  0001 C CNN
+	1    3000 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 4450 3000 4350
+$Comp
+L Amplifier_Operational:LM358 U1
+U 3 1 5D5DEF27
+P 5450 3600
+F 0 "U1" H 5408 3646 50  0000 L CNN
+F 1 "LM358" H 5408 3555 50  0000 L CNN
+F 2 "" H 5450 3600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 5450 3600 50  0001 C CNN
+F 4 "X" H 5450 3600 50  0001 C CNN "Spice_Primitive"
+F 5 "LMX58_LM2904" H 5450 3600 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5450 3600 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "3 2 8 4 1" H 5450 3600 50  0001 C CNN "Spice_Node_Sequence"
+F 8 "LMx58_LM2904.CIR" H 5450 3600 50  0001 C CNN "Spice_Lib_File"
+	3    5450 3600
+	1    0    0    -1  
+$EndComp
+Text GLabel 3900 3600 2    50   Input ~ 0
+OUT
+Wire Wire Line
+	3900 3600 3800 3600
+Connection ~ 3800 3600
+Text Label 3000 3700 0    50   ~ 0
+IN
+$Comp
+L power:GND #PWR05
+U 1 1 5D5E27B5
+P 5350 3900
+F 0 "#PWR05" H 5350 3650 50  0001 C CNN
+F 1 "GND" H 5355 3727 50  0000 C CNN
+F 2 "" H 5350 3900 50  0001 C CNN
+F 3 "" H 5350 3900 50  0001 C CNN
+	1    5350 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR04
+U 1 1 5D5E2D44
+P 5350 3300
+F 0 "#PWR04" H 5350 3150 50  0001 C CNN
+F 1 "VDD" H 5367 3473 50  0000 C CNN
+F 2 "" H 5350 3300 50  0001 C CNN
+F 3 "" H 5350 3300 50  0001 C CNN
+	1    5350 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5D5E3629
+P 4700 3700
+F 0 "BT1" H 4818 3796 50  0000 L CNN
+F 1 "DC 3.3" H 4818 3705 50  0000 L CNN
+F 2 "" V 4700 3760 50  0001 C CNN
+F 3 "~" V 4700 3760 50  0001 C CNN
+	1    4700 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3500 4700 3300
+Wire Wire Line
+	4700 3300 5350 3300
+Connection ~ 5350 3300
+Wire Wire Line
+	4700 3800 4700 3900
+Wire Wire Line
+	4700 3900 5350 3900
+Connection ~ 5350 3900
+Text Notes 2450 2600 0    50   ~ 0
+.tran 1u 100m 0
+$EndSCHEMATC

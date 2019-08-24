@@ -1,0 +1,11 @@
+.title KiCad schematic
+.include "lm358.txt"
+XU1 Net-_R3-Pad2_ 0 OUT VDD Net-_U1-Pad4_ LM358
+R3 Net-_R3-Pad1_ Net-_R3-Pad2_ 100k
+R4 OUT Net-_R3-Pad2_ 20k
+V1 Net-_R3-Pad1_ 0 dc 1.65 ac 0 0 sin(1.65 500m 100 0 0)
+V2 VDD 0 DC 3.3
+V3 0 Net-_U1-Pad4_ DC 3.3
+R1 OUT 0 10k
+.tran 1u 100m 0 uic
+.end
