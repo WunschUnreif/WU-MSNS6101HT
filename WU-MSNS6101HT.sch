@@ -910,7 +910,6 @@ Text GLabel 7000 4300 0    50   Input ~ 0
 HTPWM
 Wire Wire Line
 	7300 4300 7000 4300
-NoConn ~ 6300 2550
 Wire Notes Line
 	6650 6300 8100 6300
 Wire Notes Line

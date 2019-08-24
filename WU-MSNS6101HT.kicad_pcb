@@ -35,14 +35,14 @@
     (43 Eco2.User user)
     (44 Edge.Cuts user)
     (45 Margin user)
-    (46 B.CrtYd user hide)
-    (47 F.CrtYd user hide)
+    (46 B.CrtYd user)
+    (47 F.CrtYd user)
     (48 B.Fab user hide)
     (49 F.Fab user hide)
   )
 
   (setup
-    (last_trace_width 0.254)
+    (last_trace_width 0.25)
     (user_trace_width 0.1524)
     (user_trace_width 0.254)
     (user_trace_width 0.508)
